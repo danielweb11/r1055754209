@@ -52,9 +52,9 @@
                     <td>{{$user->email}}</td>
                     <td>{{$user->salario}}</td>
                     <td>
-                        <a href="" class="btn btn-warning">Editar</a>
+                        <a href="{{route('users.edit',$user->id)}}" class="btn btn-warning">Editar</a>
 
-                        <form action="" method="post">
+                        <form action="{{route('users.destroy',$user->id)}}" method="post">
                             @csrf
                             @method('delete')
                             <button type="submit" class="btn btn-danger">Eliminar</button>
