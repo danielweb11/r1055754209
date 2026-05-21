@@ -19,7 +19,7 @@ class UserMiddleware
     {
         $cantidad=User::where('salario','>','1000000')->count();
 
-        if ($cantidad>1) {
+        if ($cantidad>10) {
             return $next($request);
         }
 
