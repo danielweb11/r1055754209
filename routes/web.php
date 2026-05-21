@@ -14,7 +14,7 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/users',[UserController::class,'index'])->name('users.index');
+Route::get('/users',[UserController::class,'index'])->middleware('user')->name('users.index');
 Route::post('/users',[UserController::class,'store'])->name('users.store');
 Route::put('/users/{id}',[UserController::class,'update'])->name('users.update');
 Route::get('/users/{id}',[UserController::class,'edit'])->name('users.edit');
